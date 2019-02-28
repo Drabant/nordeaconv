@@ -21,5 +21,5 @@ for line in csvfile:
             category = next(line)
             amount = next(line)
             saldo = next(line)
-            datalist += [[date, amount, desc]]
-print(datalist)
+            datalist += [{'date': date, 'amount': amount, 'desc': desc}]
+print(sorted(datalist, key=lambda k: k['date']))
